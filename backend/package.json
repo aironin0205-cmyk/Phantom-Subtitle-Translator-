@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node dist/server.js",
     "start:worker": "node dist/worker-runner.js",
-    "build": "tsc"
+    "build": "tsc -p ."
   },
   "dependencies": {
     "@google/generative-ai": "^0.2.1",
