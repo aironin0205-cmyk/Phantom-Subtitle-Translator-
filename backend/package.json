@@ -7,7 +7,6 @@
     "start": "node dist/server.js",
     "start:worker": "node dist/worker-runner.js",
     "build": "tsc --project tsconfig.json"
-},
   },
   "dependencies": {
     "@google/generative-ai": "^0.2.1",
