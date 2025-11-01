@@ -5,14 +5,14 @@ FROM node:20-slim
 WORKDIR /app
 
 # Copy package.json and package-lock.json (if available)
-COPY backend/package.json ./
-COPY backend/package-lock.json* ./
+COPY package.json ./
+COPY package-lock.json* ./
 
 # Install app dependencies
 RUN npm install
 
 # Copy the rest of the backend source code
-COPY backend/ ./
+COPY . .
 
 # Build the TypeScript code
 RUN npm run build
@@ -21,5 +21,4 @@ RUN npm run build
 EXPOSE 3001
 
 # The command to run your app
-# This will be overridden by the Start Command on Render, but is good practice
 CMD [ "node", "dist/server.js" ]
