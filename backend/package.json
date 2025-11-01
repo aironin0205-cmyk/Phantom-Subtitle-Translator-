@@ -4,9 +4,10 @@
   "description": "Enterprise backend for the Phantom Subtitle Translator",
   "main": "dist/server.js",
   "scripts": {
-    "start": "node dist/server.js",
-    "start:worker": "node dist/worker-runner.js",
-    "build": "tsc"
+  "start": "node dist/server.js",
+  "start:worker": "node dist/worker-runner.js",
+  "build": "tsc -p tsconfig.json"
+},
   },
   "dependencies": {
     "@google/generative-ai": "^0.2.1",
